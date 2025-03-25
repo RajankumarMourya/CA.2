@@ -1,0 +1,143 @@
+/* Slick Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus, .slick-loading .slick-track, .slick-loading .slick-slide {
+  outline: none;
+  visibility: hidden;
+}
+
+.slick-list.dragging {
+  cursor: grab;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  outline: 0;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0;
+  outline: none;
+}
+
+.slick-prev { left: -20px; }
+.slick-next { right: -20px; }
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-family: FontAwesome;
+  font-size: 30px;
+  color: #000;
+  opacity: 1;
+}
+
+.slick-prev:before { content: '\f104'; }
+.slick-next:before { content: '\f105'; }
+
+[dir="rtl"] .slick-prev:before, [dir="rtl"] .slick-next:before {
+  content: '';
+}
+
+.slick-dotted.slick-slider { margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  font-size: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.slick-dots li button:before {
+  content: '\f111';
+  font-family: FontAwesome;
+  font-size: 18px;
+  color: #000;
+}
+
+.slick-dots li.slick-active button:before {
+  color: red;
+  content: '\f192';
+}
